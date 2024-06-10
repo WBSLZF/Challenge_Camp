@@ -1,0 +1,33 @@
+msisdn: 打电话的id
+start_time: 通话开始时间 Note: 可以统计用户的每日平均次数，用户的通话天数，通话次数的方差，对日期分桶(5天一个桶),
+end_time: 通话结束时间
+call_event: 通话类型，两个值call_src: 打电话方，call_dst:被打电话方
+other_party: 接电话的id
+ismultimedia: 是否是视频通话
+home_area_code: 打电话的地区号
+visit_area_code: 到访地区号(这个没看懂)
+called_home_code: 对方的归属地区号
+called_code: 对方的访区号
+a_serv_type: a用户业务类型(01主叫，02被叫，03呼转)
+long_type1: 长途类型（国际长途，省际长途，省内长途)
+roam_type: 漫游类型(非漫游,省内漫游,省际出访漫游,国际漫游等)
+a_product_id: 产品编码id
+open_datetime: 开户时间 如：20181125140533
+call_duration: 通话时长 秒 Note: 通话时长的分类统计（2min以内，2-10min，10min以上），通话时长的均值，最大值，中位数，通话时长按日期的统计量
+cfee: 基本通话费
+lfee: 长途通话费
+hour: 通话小时
+dayofweek: 星期 1-7代表周一至周天
+phone1_type: 打电话方的号码类型（比如什么证券，虚商，这个感觉挺重要的）
+phone2_type: 被叫的的号码类型
+phone1_loc_city: 打电话方的通话所在地 到地市，如沈阳
+phone1_loc_province: 打电话方的通话所在省 到省份，如辽宁
+phone2_loc_city: 对端标识号2的通话所在地 到地市，如沈阳
+phone2_loc_province: 对端标识号2的通话所在省 到省份，如辽宁
+update_time: 入库时间 yyyy-mm-dd hh24:mm:ss
+date: 通话发生时间 yyyy-mm-dd Note: 对于日期想法还是和前两张表一致，做bagging，但是我现在整理的时候才发现我似乎忘了做一个one-hot...这里做bagging我分别对每个bag中， 流量占比， 流量使用次数占比， 访问时间占比做了统计。
+date_c: 取数时间（这啥） yyyymmdd
+
+
+# https://git hub.com/guoxiongfeng/2018-MobileRiskUser/blob/master/docs/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B.md
+# https://blog.csdn.net/newlw/article/details/125617685
